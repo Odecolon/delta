@@ -1,14 +1,16 @@
 import sys
 
+delta_version = "0.2a"
+
 a = []
 
 lambda_rl = 0.95
-t_st      = [12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.306, 2.262]
+t_st      = [12.706, 4.303, 3.182, 2.776, 2.571, 2.447, 2.365, 2.306, 2.262, 2.2, 2.2, 2.2, 2.2, 2.1]
 
 print(' ')
-print('delta v 0.2      -      error calculation utility')
+print('delta v ', delta_version, ' -      error calculation utility')
 print('-------------------------------------------------')
-print('n         - number of measurements, 1 < n < 11')
+print('n         - number of measurements, 1 < n < 16')
 print('l         - scale interval value')
 print('a[i]      - one of the measured values')
 print('lambda_rl - reliability ratio, is 0.95 by default')
@@ -19,7 +21,7 @@ print('-------------------------------------------------')
 
 n = int(input('n    = '))
 
-if (n < 2) or (n > 10):
+if (n < 2) or (n > 15):
       print('-------------------------------------------------')
       sys.exit('Incorrect number of measurements!')
 
@@ -56,3 +58,4 @@ print('a_a       = ', a_a)
 print('delta_a   = ', delta_a)
 
 foo = input()
+
